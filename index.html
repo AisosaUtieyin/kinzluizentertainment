@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kinz Luiz Entertainment</title>
+    <style>
+        
+        body {
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif; 
+        }
+
+        header {
+            background-color: transparent;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            width: 103.83px;
+            height: 103.39px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav li {
+            display: inline;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        #slider {
+            flex: 1;
+            margin: 20px auto;
+            width: 80%;
+            text-align: center;
+            position: relative;
+            overflow: hidden; 
+        }
+
+        .slider-item {
+            display: none;
+            width: 100%; 
+        }
+
+        .slider-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .footer-content {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.footer-icons a {
+    margin-left: 10px;
+}
+
+
+.footer-icons img {
+    width: 40px; 
+    height: 40px;
+}
+
+
+.footer-text p {
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+}
+
+.styled-text {
+    font-size: 30px; 
+    color: #fff;
+    margin: 0;
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+}
+
+       
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="IMG_4387.jpg" alt="Company Logo">
+        <nav>
+            <ul>
+                <li><a href="eventhosting.html">Event Hosting</a></li>
+                <li><a href="eventmanagement.html">Event Management</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slider Section -->
+    <section id="slider">
+        <div class="slider-item">
+            <img src="image1.jpg" alt="Image 1">
+        </div>
+        <div class="slider-item">
+            <img src="image2.jpg" alt="Image 2">
+        </div>
+        <div class="slider-item">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+        <div class="slider-item">
+            <img src="image4.jpg" alt="Image 4">
+        </div>
+       
+    </section>
+
+    <!-- Footer Section -->
+<footer>
+  <div class="footer-content">
+      <div class="footer-text">
+        <p class="styled-text">KINZ LUIZ</p>
+      </div>
+      <div class="footer-icons">
+          <a href="https://www.instagram.com/kinzluizentertainment" target="_blank"><img src="ig.jpeg" alt="Instagram"></a>
+          <a href="mailto:louisutybusinessenquiries@gmail.com"><img src="email.png" alt="Email"></a>
+      </div>
+  </div>
+</footer>
+
+
+    <script>
+        let currentSlide = 0;
+        const sliderItems = document.querySelectorAll('.slider-item');
+        showSlide(currentSlide);
+
+        function showSlide(slideIndex) {
+            if (slideIndex < 0) {
+                currentSlide = sliderItems.length - 1;
+            } else if (slideIndex >= sliderItems.length) {
+                currentSlide = 0;
+            }
+
+            sliderItems.forEach((item, index) => {
+                if (index === currentSlide) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            if (currentSlide === sliderItems.length - 1) {
+                setTimeout(() => {
+                    currentSlide = 0; 
+                    showSlide(currentSlide);
+                }, 35000);
+            }
+        }
+
+        setInterval(() => {
+            currentSlide++;
+            showSlide(currentSlide);
+        }, 5000);
+    </script>
+</body>
+</html>

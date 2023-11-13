@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kinz Luiz Entertainment</title>
+    <style>
+      
+
+        
+        body {
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: transparent;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            width: 103.83px;
+            height: 103.39px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav li {
+            display: inline;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        
+        section#contact {
+            flex: 1; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        form#contact-form {
+            width: 45%;
+            color: orange;
+            margin-right: 100px; 
+        }
+
+        form#contact-form label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        form#contact-form input,
+        form#contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #fff;
+        }
+
+        form#contact-form input[type="submit"] {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        form#contact-form input[type="submit"]:hover {
+            background-color: white;
+            color: orange;
+        }
+
+        p#contact-email {
+            font-weight: bold;
+            margin-left:10%
+
+        }
+
+        h2#testimonial {
+            width: 40%;
+            color: orange; 
+            margin-left:10%
+        }
+
+        .footer-content {
+            background-color: #111;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .footer-icons a {
+            margin-left: 10px;
+        }
+
+        .footer-icons img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .footer-text p {
+            font-size: 24px;
+            color: #fff;
+            margin: 0;
+        }
+
+        .styled-text {
+            font-size: 30px;
+            color: #fff;
+            margin: 0;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <a href="index.html">
+            <img src="IMG_4387.jpg" alt="Company Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="eventhosting.html">Event Hosting</a></li>
+                <li><a href="eventmanagement.html">Event Management</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+
+    <section id="contact">
+        <div>
+            <h1 style="color: orange; margin-left: 10%; margin-top: 100px;">CONTACT ME</h1>
+            <p style="color: orange; margin-left: 10%;">My email: <span id="contact-email">louisutybusinessenquiries@gmail.com</span></p>
+            <h2 id="testimonial">"EXCELLENT. KINZ LUIZ DID AN AMAZING JOB. WE COULDN’T HAVE ASKED FOR A BETTER EMCEE. HE CRUSHED IT."</h2>
+        </div>
+        <form id="contact-form">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required><br>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+
+            <input type="submit" value="Send">
+        </form>
+    </section>
+
+  
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">
+                <p class="styled-text">KINZ LUIZ</p>
+            </div>
+            <div class="footer-icons">
+                <a href="https://www.instagram.com/kinzluizentertainment" target="_blank"><img src="ig.jpeg" alt="Instagram"></a>
+                <a href="mailto:louisutybusinessenquiries@gmail.com"><img src="email.png" alt="Email"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
